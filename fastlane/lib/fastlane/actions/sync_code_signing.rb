@@ -48,6 +48,7 @@ module Fastlane
                                                                                         platform: params[:platform])
 
           if params[:derive_catalyst_app_identifier]
+            puts("===========  APPENDING maccatalyst (2)")
             app_identifier = "maccatalyst.#{app_identifier}"
           end
 

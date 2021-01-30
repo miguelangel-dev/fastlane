@@ -156,6 +156,7 @@ module Gym
               # Xcode prefixes "maccatalyst." if building a Catalyst app for mac and
               # if DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER is set to YES
               if Gym.building_mac_catalyst_for_mac? && build_configuration.resolve_build_setting("DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER", target) == "YES"
+                puts("===========  APPENDING maccatalyst")
                 bundle_identifier = "maccatalyst.#{bundle_identifier}"
               end
 
