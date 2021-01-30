@@ -52,7 +52,8 @@ module Fastlane
             app_identifier = "maccatalyst.#{app_identifier}"
           end
           puts("===========  APP IDENTIFIER: #{app_identifier}")
-
+          puts(ENV[env_variable_name])
+          
           mapping[app_identifier] = ENV[env_variable_name]
         end
 
